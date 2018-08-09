@@ -1,0 +1,302 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+https://github.com/dope/lemonade - Neat lightweight grid.
+
+
+The grid below is a custom built thingy I modeled a bit after
+Gridset. It's VERY basic and probably shouldn't be used on
+your client projects. The idea is you learn how to roll your
+own grids. It's better in the long run and allows you full control
+over your project's layout.
+
+******************************************************************/
+
+.col-center {
+  float: none !important;
+  margin: 0 auto !important;
+}
+
+// the last column
+.last-col {
+  float: right;
+  padding-right: 0 !important;
+}
+
+/*
+Mobile Grid Styles
+These are the widths for the mobile grid.
+There are four types, but you can add or customize
+them however you see fit.
+*/
+@media (max-width: 767px) {
+
+  .row {
+    margin: 0 -8px !important;
+  }
+
+  // using a mixin since we can't use placeholder selectors
+  @mixin grid-col {
+    float: left;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .row-edge {
+    margin: 0 !important;
+  }
+
+  .m-all {
+    @include grid-col;
+    width: 100%;
+  }
+
+  .m-1of2 {
+    @include grid-col;
+    width: 50%;
+  }
+
+  .m-1of3 {
+    @include grid-col;
+    width: 33.33%;
+  }
+
+  .m-2of3 {
+    @include grid-col;
+    width: 66.66%;
+  }
+
+  .m-1of4 {
+    @include grid-col;
+    width: 25%;
+  }
+
+  .m-3of4 {
+    @include grid-col;
+    width: 75%;
+  }
+
+  .m-no-pad {
+    padding: 0;
+  }
+
+} // end mobile styles
+
+
+/* Portrait tablet to landscape */
+@media (min-width: 768px) and (max-width: 1029px) {
+
+  .row {
+    margin: 0 -12px !important;
+  }
+
+  // using a mixin since we can't use placeholder selectors
+  @mixin grid-col {
+    float: left;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .t-all {
+    @include grid-col;
+    width: 100%;
+  }
+
+  .t-1of2 {
+    @include grid-col;
+    width: 50%;
+  }
+
+  .t-1of3 {
+    @include grid-col;
+    width: 33.33%;
+  }
+
+  .t-2of3 {
+    @include grid-col;
+    width: 66.66%;
+  }
+
+  .t-1of4 {
+    @include grid-col;
+    width: 25%;
+  }
+
+  .t-3of4 {
+    @include grid-col;
+    width: 75%;
+  }
+
+  .t-1of5 {
+    @include grid-col;
+    width: 20%;
+  }
+
+  .t-2of5 {
+    @include grid-col;
+    width: 40%;
+  }
+
+  .t-3of5 {
+    @include grid-col;
+    width: 60%;
+  }
+
+  .t-4of5 {
+    @include grid-col;
+    width: 80%;
+  }
+
+} // end tablet
+
+/* Landscape to small desktop */
+@media (min-width: 1030px) {
+
+  .row {
+    margin: 0 -12px !important;
+  }
+
+  // using a mixin since we can't use placeholder selectors
+  @mixin grid-col {
+    float: left;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .d-all  {
+    @include grid-col;
+    width: 100%;
+  }
+
+  .d-1of2 {
+    @include grid-col;
+    width: 50%;
+  }
+
+  .d-1of3 {
+    @include grid-col;
+    width: 33.33%;
+  }
+
+  .d-2of3 {
+    @include grid-col;
+    width: 66.66%;
+  }
+
+  .d-1of4 {
+    @include grid-col;
+    width: 25%;
+  }
+
+  .d-3of4 {
+    @include grid-col;
+    width: 75%;
+  }
+
+  .d-1of5 {
+    @include grid-col;
+    width: 20%;
+  }
+
+  .d-2of5 {
+    @include grid-col;
+    width: 40%;
+  }
+
+  .d-3of5 {
+    @include grid-col;
+    width: 60% !important;
+  }
+
+  .d-4of5 {
+    @include grid-col;
+    width: 80%;
+  }
+
+  .d-1of10 {
+    @include grid-col;
+    width: 10%;
+  }
+} // end desktop styles
+
+/* Large desktop */
+@media (min-width: 1240px) {
+
+  .row {
+    margin: 0 -12px !important;
+  }
+
+  // using a mixin since we can't use placeholder selectors
+  @mixin grid-col {
+    float: left;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .xl-all  {
+    @include grid-col;
+    width: 100%;
+  }
+
+  .xl-1of2 {
+    @include grid-col;
+    width: 50%;
+  }
+
+  .xl-1of3 {
+    @include grid-col;
+    width: 33.33%;
+  }
+
+  .xl-2of3 {
+    @include grid-col;
+    width: 66.66%;
+  }
+
+  .xl-1of4 {
+    @include grid-col;
+    width: 25%;
+  }
+
+  .xl-3of4 {
+    @include grid-col;
+    width: 75%;
+  }
+
+  .xl-1of5 {
+    @include grid-col;
+    width: 20%;
+  }
+
+  .xl-2of5 {
+    @include grid-col;
+    width: 40%;
+  }
+
+  .xl-3of5 {
+    @include grid-col;
+    width: 60% !important;
+  }
+
+  .xl-4of5 {
+    @include grid-col;
+    width: 80%;
+  }
+
+  .xl-1of10 {
+    @include grid-col;
+    width: 10%;
+  }
+} // end desktop styles
